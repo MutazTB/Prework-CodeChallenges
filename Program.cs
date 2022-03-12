@@ -6,8 +6,10 @@ public class Class1
 	{
 		static void Main(string[] args)
 		{
-            // Console.WriteLine(CheckScore()); // call the CheckScore function and get the output
-        }
+
+			// Console.WriteLine(IsLeapYear());// call the IsLeapYear function and get the output
+      // Console.WriteLine(CheckScore()); // call the CheckScore function and get the output
+     }
 
         static int CheckScore()
         {
@@ -37,6 +39,19 @@ public class Class1
             else
             {
                 return number * count;
+            }
+        }
+  static string IsLeapYear()
+        {
+            Console.WriteLine("Enter Year : ");
+            int Year = int.Parse(Console.ReadLine());
+            if (((Year % 4 == 0) && (Year % 100 != 0)) || (Year % 400 == 0))
+            {
+                return "Yes it is a Leap Year.";
+            }
+            else
+            {
+                return "No it is not a Leap Year.";
             }
         }
     }
