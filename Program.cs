@@ -9,6 +9,8 @@ public class Class1
 
 			// Console.WriteLine(IsLeapYear());// call the IsLeapYear function and get the output
       // Console.WriteLine(CheckScore()); // call the CheckScore function and get the output
+      //int[] perfect = { 1, 2, 3 };
+			//Console.WriteLine(IsPerfect(perfect));
      }
 
         static int CheckScore()
@@ -53,6 +55,26 @@ public class Class1
             {
                 return "No it is not a Leap Year.";
             }
+        }
+    static string IsPerfect(int[] sequence)
+        {
+
+            int product = 1;
+            int sum = 0;
+            foreach (int number in sequence)
+            {
+                if (number < 0)
+                {
+                    return "No";
+                }
+                product *= number;
+                sum += number;
+            }
+            if (product == sum)
+            {
+                return "Yes";
+            }
+            return "No";
         }
     }
 }
